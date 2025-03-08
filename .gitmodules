@@ -1,0 +1,6 @@
+[submodule "course-examples-2025"]
+	path = course-examples-2025
+	url = git@gitlab.epfl.ch:math454-phpc/course-examples-2025.git
+[submodule "exercises-2025"]
+	path = exercises-2025
+	url = git@gitlab.epfl.ch:math454-phpc/exercises-2025.git
