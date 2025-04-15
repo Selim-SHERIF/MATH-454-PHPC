@@ -47,7 +47,8 @@ CGSolverSparse::solve(std::vector<double> &x)
   std::vector<double> tmp(m_n);
 
   // r = b - A * x;
-  m_A.mat_vec(x, Ap);
+  m_A.mat_vec_parallel(x, Ap, MPI_COMM_WORLD);
+
   r = m_b;
   cblas_daxpy(m_n, -1., Ap.data(), 1, r.data(), 1);
 
@@ -62,7 +63,8 @@ CGSolverSparse::solve(std::vector<double> &x)
   for (; k < m_n; ++k)
   {
     // Ap = A * p;
-    m_A.mat_vec(p, Ap);
+    m_A.mat_vec_parallel(p, Ap, MPI_COMM_WORLD);
+
 
     // alpha = rsold / (p' * Ap);
     auto alpha = rsold / std::max(cblas_ddot(m_n, p.data(), 1, Ap.data(), 1), rsold * NEARZERO);
@@ -91,22 +93,28 @@ CGSolverSparse::solve(std::vector<double> &x)
     rsold = rsnew;
     if (DEBUG)
     {
-      std::cout << "\t[STEP " << k << "] residual = " << std::scientific << std::sqrt(rsold) << "\r" << std::flush;
+
+        std::cout << "\t[STEP " << k << "] residual = " << std::scientific << std::sqrt(rsold) << "\r" << std::flush;
     }
   }
 
   if (DEBUG)
   {
-    m_A.mat_vec(x, r);
+    m_A.mat_vec_parallel(x, r, MPI_COMM_WORLD);
     cblas_daxpy(m_n, -1., m_b.data(), 1, r.data(), 1);
     auto res =
       std::sqrt(cblas_ddot(m_n, r.data(), 1, r.data(), 1)) / std::sqrt(cblas_ddot(m_n, m_b.data(), 1, m_b.data(), 1));
     auto nx = std::sqrt(cblas_ddot(m_n, x.data(), 1, x.data(), 1));
-    std::cout << "\t[STEP " << k << "] residual = " << std::scientific << std::sqrt(rsold) << ", ||x|| = " << nx
-              << ", ||Ax - b||/||b|| = " << res << std::endl;
+  
+    int rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    if (rank == 0) {
+      std::cout << "\t[STEP " << k << "] residual = " << std::scientific << std::sqrt(rsold)
+                << ", ||x|| = " << nx
+                << ", ||Ax - b||/||b|| = " << res << std::endl;
+    }
   }
-}
-
+}  
 void
 CGSolverSparse::read_matrix(const std::string &filename)
 {

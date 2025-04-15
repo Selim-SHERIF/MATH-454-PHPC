@@ -44,7 +44,11 @@ void MatrixCOO::read(const std::string & fn) {
     int I, J;
     double a_;
 
-    fscanf(f, "%d %d %lg\n", &I, &J, &a_);
+      // Check that exactly 3 values are read from the file.
+    if (fscanf(f, "%d %d %lg\n", &I, &J, &a_) != 3) {
+      fprintf(stderr, "Error reading matrix entry at index %d\n", i);
+      exit(1);
+    }
     I--; /* adjust from 1-based to 0-based */
     J--;
 
