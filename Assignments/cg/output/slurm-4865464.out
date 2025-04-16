@@ -1,0 +1,3 @@
+Running CG solver with 2 MPI processes on matrix lap2D_5pt_n300.mtx...
+srun: error: Unable to create step for job 4865464: More processors requested than permitted
+Run complete.

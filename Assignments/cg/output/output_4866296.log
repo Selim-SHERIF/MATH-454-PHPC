@@ -1,0 +1,4 @@
+Running CG solver with 1 MPI processes on matrix lap2D_5pt_n600.mtx...
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 4866296.0 ON h075 CANCELLED AT 2025-04-16T21:19:40 ***
+slurmstepd: error: *** JOB 4866296 ON h075 CANCELLED AT 2025-04-16T21:19:40 ***
