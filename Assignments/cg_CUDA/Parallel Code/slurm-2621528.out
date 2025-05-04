@@ -1,0 +1,12 @@
+
+Currently Loaded Modules:
+  1) gcc/11.3.0    3) libxml2/2.9.13   5) openblas/0.3.20
+  2) zlib/1.2.12   4) cuda/11.8.0
+
+ 
+
+terminate called after throwing an instance of 'std::length_error'
+  what():  vector::_M_default_append
+======== Error: Application received signal 134
+srun: error: i32: task 0: Exited with exit code 15
+srun: Terminating StepId=2621528.0

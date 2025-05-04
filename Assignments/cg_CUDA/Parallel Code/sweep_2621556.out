@@ -1,0 +1,12 @@
+=== lap2D_5pt_n100.mtx @ 1 threads/block ===
+=== lap2D_5pt_n100.mtx @ 2 threads/block ===
+=== lap2D_5pt_n100.mtx @ 4 threads/block ===
+=== lap2D_5pt_n100.mtx @ 8 threads/block ===
+=== lap2D_5pt_n100.mtx @ 16 threads/block ===
+=== lap2D_5pt_n100.mtx @ 32 threads/block ===
+=== lap2D_5pt_n100.mtx @ 64 threads/block ===
+=== lap2D_5pt_n100.mtx @ 128 threads/block ===
+=== lap2D_5pt_n100.mtx @ 256 threads/block ===
+=== lap2D_5pt_n100.mtx @ 512 threads/block ===
+=== lap2D_5pt_n100.mtx @ 1024 threads/block ===
+Sweep complete. Results in results.csv

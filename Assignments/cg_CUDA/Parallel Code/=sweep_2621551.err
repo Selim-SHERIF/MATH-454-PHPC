@@ -1,0 +1,22 @@
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.0. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.1. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.2. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.3. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.4. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.5. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.6. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.7. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.8. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.9. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
+slurmstepd: error: Detected 1 oom_kill event in StepId=2621551.10. Some of the step tasks have been OOM Killed.
+srun: error: i15: task 0: Out Of Memory
